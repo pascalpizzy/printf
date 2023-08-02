@@ -19,6 +19,7 @@
 
 /**
  * struct parameters - parameters struct
+ *
  * @unsign: flag if unsigned value
  *
  * @plus_flag: on if plug_flag specified
@@ -52,17 +53,17 @@ unsigned int l_modifier		: 1;
 } params_t;
 
 /**
- * struct specifier - struct token
+ * struct specifier - the struct token
  *
- * @specifier: format token
- * @f: The function associated
+ * @specifier: the format token
+ * @f: the function associated
  */
 
 typedef struct specifier
 {
-char *specifier;
-int (*f)(va_list, params_t *);
-}	specifier_t;
+	char *specifier;
+	int (*f)(va_list, params_t *);
+} specifier_t;
 
 /* _put.c module */
 int _puts(char *str);
