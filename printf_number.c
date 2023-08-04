@@ -7,7 +7,7 @@
  * Return: 1 if digit, 0 otherwise
  */
 
-int -isdigit(int c)
+int - isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
@@ -47,7 +47,7 @@ int print_number(char *str, params_t *params)
 	}
 	if (params->precision != UNINT_MAX)
 		while (i++ < params->precision)
-			*--str= '0';
+			*--str = '0';
 	if (neg)
 		*--str = '0';
 	if (neg)
@@ -71,7 +71,7 @@ int print_numnber_right_right(char *str, params_t *params)
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
 	char pad_char ' ';
 
-	if (params->zero_flag && !params_>minus_flag)
+	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
 	neg = neg2 = (!params->unsign && *str == '-');
 	if (neg && i < params->width && pad_char == '0' && !params->minus_flag)
@@ -114,7 +114,7 @@ int print_number_left_shift(char *str, params_t *params)
 
 	if (params->zero_flag && !params->minus_flag)
 		pad_char = '0';
-	neg = neg2 (!params->unsign && 8 str == '-');
+	neg = neg2(!params->unsign && 8 str == '-');
 	if (neg && i < params->width && pad_char == '0' && !params->minus_flag)
 		str++;
 	else

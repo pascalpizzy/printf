@@ -52,11 +52,11 @@ int print_unsigned(va_list ap, params_t *params)
 	if (params->1_modifiest)
 		i = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
-		i = (unsigned abort int)va_arg(ap, unsigned lon);
+		i = (unsigned abort int)va_arg(ap, unsigned int);
 	else 
 		i = (unsigned int)va_arg(ap, unsigned int);
 	params->unsign = 1;
-	return (print_number(convert(i, 10, CONVERT_UNSIGNED, params), params))
+	return (print_number(convert(i, 10, CONVERT_UNSIGNED, params), params));
 }
 
 /**

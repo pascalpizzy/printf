@@ -108,10 +108,10 @@ int get_modifier(char *s, params_t *params)
 }
 
 /**
- * get_with - gets the width from the format string
+ * get_with - gets width from the format string
  * @s: format string
  * @params: parameters struct
- * @ap: the argument pointer
+ * @ap: argument pointer
  *
  * Return: new pointer
  */

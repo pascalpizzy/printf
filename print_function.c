@@ -104,7 +104,7 @@ int print_percent(va_list ap, params_t *params)
  *
  * Return: number chars printed
  */
-int print_S(va_list ap,params_t *params)
+int print_S(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *);
 	char *hex;

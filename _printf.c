@@ -4,11 +4,11 @@
   * _printf - prints anything
   * @format: the format string
   *
-  * Return: number of bytes printed
+  * Return: num of bytes printed
   */
 int _printf(const char *format, ...)
 {
-        int sum = 0;
+	int sum = 0;
         va_list ap;
         char *p, *start;
         params_t params = PARAMS_INIT;
@@ -35,15 +35,15 @@ int _printf(const char *format, ...)
                 }
                 p = get_width(p, &params, ap);
                 p = get_precision(p, &params, ap);
-                if (get_modifier(p, &paramsS))
+                if (get_modifier(p, &params))
                         p++;
-                ifb(!get_spacifier(p))
+                if (!get_spacifier(p))
                         sum += print_from_to(start, p,
-			params.1_modiier || params.h_hmodifier ? p - 1 : 0);
+			params.l_modiier || params.h_hmodifier ? p - 1 : 0);
                 else
                         sum += get_print_func(p, ap, &params);
         }
         _putchar(BUF_FLUSH);
         va_end(ap);
-        return (sum)
+        return (sum);
 }

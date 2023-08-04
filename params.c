@@ -3,7 +3,7 @@
 /**
  * init_params - reset buf and clears struct
  * @params: parameters struct
- * @params: parameters struct
+ * @ap: argument pointer
  *
  * Return: void
  */
@@ -21,6 +21,6 @@ void init_params(params_t *params, va_list ap)
         params->precision = UINT_MAX;
 
         params->h_modifier = 0;
-        params->1_modifier = 0;
+        params->l_modifier = 0;
         (void)ap;
 }

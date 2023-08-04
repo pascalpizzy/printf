@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_from_to - print a range of character addresses
+ * print_from_to - prints a range of character addresses
  * @start: starting address
  * @stop: stopping address
  * @except: except address
@@ -40,8 +40,8 @@ int print_rev_(va_list ap, params_t *params)
 		for (len = 0; *str; str++)
 			len++;
 		str--;
-		for (; len > 0; len, str--)
-			sum += _putchar(*str)
+		for (; len > 0; len--, str--)
+			sum += _putchar(*str);
 	}
 	return (sum);
 }
@@ -51,9 +51,7 @@ int print_rev_(va_list ap, params_t *params)
  * @ap: string
  * @params: parameters struct
  *
- * Return: parameters struct
- *
- * Return: number of bytes printed
+ * Return: num of bytes printed
  */
 int print_rev(va_list_list ap, params_t *params)
 {
@@ -92,7 +90,7 @@ int print_rot13(va_list ap, params_t *params)
 	index = 0;
 	while (a[i])
 	{
-		if ((a[i] >= 'A' && a[i] <= 'g')
+		if ((a[i] >= 'A' && a[i] <= 'Z')
 				|| (a[i] >= 'a' && a[i] <= 'z'))
 		{
 			index = a[i] - 65;

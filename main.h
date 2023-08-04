@@ -24,8 +24,8 @@
  *
  * @plus_flag: on if plug_flag specified
  * @space_flag: on if hashtag_flag specified
- * @hashtag_flag: on if flag specified
- * @zero_flag: on if -flag spaecified
+ * @hashtag_flag: on if _flag specified
+ * @zero_flag: on if _flag spaecified
  * @minus_flag: on if _flag speccified
  *
  * @width: field width specified
@@ -35,21 +35,21 @@
  * @l_modifier: on if h_modifier is specified
  *
  */
-{
 typedef struct parameters
-unsigned int unsign		: 1;
+{
+	unsigned int unsign		: 1;
 
-unsigned int plug_flag		: 1;
-unsigned int space_flag		: 1;
-unsigned int hashtag_flag	: 1;
-unsigned int zero_flag		: 1;
-unsigned int minus_flag		: 1;
+	unsigned int plug_flag		: 1;
+	unsigned int space_flag		: 1;
+	unsigned int hashtag_flag	: 1;
+	unsigned int zero_flag		: 1;
+	unsigned int minus_flag		: 1;
 
-unsigned int width;
-unsigned int precision
+	unsigned int width;
+	unsigned int precision;
 
-unsigned int h_modifier		: 1;
-unsigned int l_modifier		: 1;
+	unsigned int h_modifier		: 1;
+	unsigned int l_modifier		: 1;
 } params_t;
 
 /**
@@ -84,7 +84,7 @@ int print_address(va_list ap, params_t *params);
 /* specifier.c module */
 int (*get_specifier(char *s)) (va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
-int get_flag(char *s, params_t *params)
+int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
 

@@ -2,11 +2,11 @@
 
 /**
  * _puts - prints strings with a newline
- * @str: the string to print
+ * @str: string to print
  *
  * Return: void
  */
-init _puts(char *str);
+init _puts(char *stri)
 {
         char *a = str;
 
@@ -15,16 +15,16 @@ init _puts(char *str);
         return (str - a);
 }
 /**
- * _putchar - writes the char c to stdout
- * @c: The char to print
+ * _putchar - writes character c to stdout
+ * @c: character to print
  *
  * Return: 1 on success.
- * on error, -1 is return on error and set appropriately.
+ * on error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(init c)
+int _putchar(int c)
 {
         static int i;
-        static char but[output_BUF_SIZE];
+        static char buf[OUTPUT_BUF_SIZE];
 
         if (c == BUF_FLUSH || i >= OUTPUT_BUF_SIZE)
         {
