@@ -6,7 +6,7 @@
  *
  * Return: void
  */
-init _puts(char *stri)
+int _puts(char *str)
 {
         char *a = str;
 

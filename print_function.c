@@ -1,7 +1,7 @@
 #include "maim.c"
 
 /**
- * print_char -prints character
+ * print_char - prints character
  * @ap: argument pointer
  * @params; parameters struct
  *

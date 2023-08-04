@@ -8,11 +8,11 @@
 #include <stdlib.h>
 
 #define OUTPUT_BUF_SIZE 1024
-#define BUE_FLUSH -1
+#define BUF_FLUSH -1
 
 #define NULL_STRING "(null)"
 
-#define PARAMS_INIT (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE 1
 #define CONVERT_UNSIGNED 2
@@ -70,14 +70,14 @@ int _puts(char *str);
 int _putchar(int c);
 
 /* print_fuction.c module */
-int print_char(var_list ap, params_t *params);
+int print_char(va_list ap, params_t *params);
 int print_int(va_list ap, params_t *params);
 int print_string(va_list ap, params_t *params);
 int print_percent(va_list ap, params_t *params);
 int print_s(va_list ap, params_t *params);
 
 /* number.c module */
-char *convert(long int num, int base, int flags, params);
+char *convert(long int num, int base, int flags, params_t);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
@@ -91,7 +91,7 @@ char *get_width(char *s, params_t *params, va_list ap);
 /* simple_printers.c module */
 int print_from_to(char *star, char *stop, char *except);
 int print_rev(va_list ap, params_t *params);
-int print_rot 13(va_list ap, params_t *params);
+int print_rot13(va_list ap, params_t *params);
 
 /* print_number.c module */
 int _isdigit(int c);
